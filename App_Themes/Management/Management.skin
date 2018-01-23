@@ -1,0 +1,85 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+--%>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<asp:GridView runat="server" AutoGenerateColumns="False" EmptyDataText="" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+        <EditRowStyle BackColor="#999999" />
+        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+    </asp:GridView>
+    
+    
+<asp:SiteMapPath runat="server" CssClass ="copybold" >
+                                </asp:SiteMapPath>                                
+                                <asp:DetailsView runat="server" AutoGenerateRows="False" 
+        Height="50px" Width="400px" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+    <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
+    <EditRowStyle BackColor="#999999" />
+    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+    <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
+    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+    </asp:DetailsView>
+
+<asp:Menu skinid="topMenu" runat="server"  Orientation="Horizontal" ItemWrap="False" DynamicPopOutImageUrl="~/Images/spacer.gif" StaticPopOutImageUrl="~/Images/spacer.gif" >
+
+<StaticMenuItemStyle  HorizontalPadding="9px" VerticalPadding="5px" ForeColor="#666666" Font-Names="Tahoma" CSSClass="topmenustatic" Font-Size="10px" />
+<DynamicHoverStyle CssClass ="menuitemhover" />
+
+<StaticSelectedStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
+VerticalPadding="0px" />
+<DynamicSelectedStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
+VerticalPadding="0px" />
+<DynamicMenuItemStyle  CssClass ="menuitem" />
+
+</asp:Menu>
+
+
+<cc1:AutoCompleteExtender skinId="ModelAutoComplete" runat="server" ServiceMethod="GetModelCompletionList" CompletionSetCount="20"
+    ServicePath="~/Services/AutoComplete.asmx" MinimumPrefixLength="2" CompletionInterval="250" CompletionListCssClass="autocomplete_completionListElement" 
+    CompletionListItemCssClass="autocomplete_listItem" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem" EnableCaching="False" >
+    <Animations>
+        <OnShow>
+            <Sequence>
+                <%-- Make the completion list transparent and then show it --%>
+                <OpacityAction Opacity="0" />
+                <HideAction Visible="true" />
+							
+                <%--Cache the original size of the completion list the first time
+                the animation is played and then set it to zero --%>
+							
+                <%-- Expand from 0px to the appropriate size while fading in --%>
+                <Parallel Duration=".2">
+                    <FadeIn />
+                </Parallel>
+            </Sequence>
+        </OnShow>
+
+        <OnHide>
+            <%-- Collapse down to 0px and fade out --%>
+            <Parallel Duration=".2">
+                <FadeOut />
+            </Parallel>
+        </OnHide>
+    </Animations>
+</cc1:AutoCompleteExtender>

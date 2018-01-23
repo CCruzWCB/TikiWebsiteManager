@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="default.aspx" title="Home Page"  description="Management Home Page">
+        <siteMapNode url="~/Product/BulkImageProcessing.aspx" title="Bulk Image Processing"  description="Bulk Image Processing"/>
+      <siteMapNode url="~/Product/selectproduct.aspx" title="Manage Product"  description="Manage Product Information">
+
+
+	  </siteMapNode>
+	  <siteMapNode url="~/Product/ProductRefresh.aspx" title="Order Motion Refresh"  description="Refresh from Order Motion">
+		  </siteMapNode>
+		<siteMapNode url="~/Redirects/default.aspx" title="Manage Website Redirect/Linkage Management"  description="Manage Website Redirect/Linkage Management" >
+			<siteMapNode url="~/Redirects/LinkageInfo.aspx" title="View Direct Linkage/Tracking How-to"  description="Manage News" />
+
+			<siteMapNode url="~/Redirects/ManageVirtualRedirects.aspx" title="Manage Virtual Folder Redirects"  description="Manage Virtual Folder Redirects" />
+			<siteMapNode url="~/Redirects/SearchRedirects.aspx" title="Manage Search Redirects"  description="Manage Search Redirects" />
+
+		</siteMapNode>
+      
+      <siteMapNode url="~/ContentManagement/contentmanagement.aspx" title="Manage Page Content "  description="Manage Page Content " >
+        <siteMapNode url="~/ContentManagement/managehomepage.aspx" title="Manage Home Page Features"  description="Manage Home Page Features" />
+        <siteMapNode url="~/ContentManagement/manageProductlistings.aspx" title="Manage Product Listings Page"  description="Manage Product Listings page" />
+		  <siteMapNode url="~/ContentManagement/ManagePromotionDataCubes.aspx" title="Manage Promotion Data Cubes"  description="Manage Product Listings page" />
+		  <siteMapNode url="~/ContentManagement/ManageSeriesDataCubes.aspx" title="Manage Series Data Cubes"  description="Manage Product Listings page" />
+		  <siteMapNode url="~/ContentManagement/managecategorypage.aspx" title="Select a Category Page to Maintain"  description="Select a Category Page to Maintain" />
+      </siteMapNode>
+      <siteMapNode url ="~/NonSecure/Usertools.aspx"  title="User Tools"  description="User Managment Tools" >
+        <siteMapNode url="~/Security/ChangePassword.aspx" title="Change Password"  description="Change Password"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+  </siteMap>

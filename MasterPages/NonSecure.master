@@ -1,0 +1,35 @@
+<%@ Master Language="VB"  CodeFile="NonSecure.master.vb" Inherits="MasterPages_NonSecure" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title id="myPageTitle" runat="server">[Set Title with PageTitle Property]</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+       	<div style="BORDER-RIGHT:black 1px solid; BORDER-TOP:black 1px solid; BORDER-LEFT:black 1px solid; WIDTH:100%; BORDER-BOTTOM:black 1px solid; HEIGHT:400px; TEXT-ALIGN:center">
+					<table width="100%" border="0" class="copy" cellpadding="5" cellspacing="0">
+						<tr>
+								<td align="left" height="20px" colspan="2"><asp:ImageButton ID="imgLogo" ImageAlign ="AbsMiddle" AlternateText ="Click to go Home Page" runat="server" ImageUrl = "~/images/lamplight_manager_logo.jpg"  />
+							</td>
+							<td align="right" height="20px" colspan="2">
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" />: 
+                                <asp:LoginName ID="LoginName1" runat="server" />
+                            </td>
+						</tr>
+						<tr bgcolor="#eeeeee">
+							<td align="center" height="15px" colspan="4"><asp:Label ID="lblInstruction"  runat="server">[Display Message]</asp:Label></td>
+						</tr>
+						<tr>
+						    <td colspan =4  height="400px" valign=top align =center><br /><br /><br />
+                                <asp:ContentPlaceHolder ID="ContentMain" runat="server">
+                                </asp:ContentPlaceHolder>
+						    </td>
+                        </tr>
+					</table>
+				
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<%@ Master Language="VB"  CodeFile="MasterPage.master.vb" Inherits="MasterPages_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title id="myPageTitle" runat="server">[Set Title with PageTitle Property]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+</head>
+<body>
+    <form id="form1" runat="server">
+       	<div class="box" >
+					<table width="100%" border="0" class="copy" cellpadding="5" cellspacing="0">
+						<tr>
+							<td align="left" height="20px" colspan="1"><asp:ImageButton ID="imgLogo" 
+                                    CausesValidation ="false" ImageAlign ="AbsMiddle" 
+                                    AlternateText ="Click to go Home Page" runat="server" 
+                                    ImageUrl = "~/images/tiki_logo.png"  />
+							</td><td  align ="center" width ="400px">
+							<asp:Label ID="lblMasterPageHeader" runat="server" Text ="[Page Header]" CssClass ="pageheader" ></asp:Label>
+							</td>
+							<td align="right" height="20px" colspan="2">
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" />: 
+                                <asp:LoginName ID="LoginName1" runat="server" />
+                            </td>
+						</tr>
+						<tr>
+							<td colspan="4" width="100%" align="left" class="pageheader"><asp:label ID="lblPageHeader" runat="server"  Text=""></asp:label>
+							    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DataSourceID="SiteMapDataSource1"
+                                    DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98"
+                                    StaticSubMenuIndent="10px" Visible ="false" >
+                                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                                    <DynamicMenuStyle BackColor="#B5C7DE" />
+                                    <StaticSelectedStyle BackColor="#507CD1" />
+                                    <DynamicSelectedStyle BackColor="#507CD1" />
+                                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                                </asp:Menu>
+                                <asp:SiteMapPath   ID="SiteMapPath1" runat="server">
+                                </asp:SiteMapPath>
+                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+							</td>
+						</tr>
+						<tr bgcolor="#eeeeee">
+							<td align="center" colspan="4"><asp:Label ID="lblDisplayMessage"  Width ="100%"  runat="server">[Display Message]</asp:Label>
+							<asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+							</td>
+						</tr>
+						<tr>
+						    <td colspan ="4" height="100%"  valign="top" align ="center" >
+                                
+                                <br /><br />
+                                <asp:ContentPlaceHolder ID="ContentMain" runat="server">
+                                </asp:ContentPlaceHolder>
+						    
+						    </td>
+                        </tr>
+					</table>
+    </div>
+    </form>
+</body>
+</html>

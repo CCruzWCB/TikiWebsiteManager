@@ -1,0 +1,79 @@
+<%@ Master Language="VB" MasterPageFile="~/MasterPages/Home_Layout.master" CodeFile="BuyOnline_Layout.master.vb"
+    Inherits="MasterPages_BuyOnline_Layout" %>
+    <%@ MasterType VirtualPath ="~/MasterPages/Home_Layout.master"  %>
+<asp:Content runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+    <table width="931" border="0" cellspacing="0" cellpadding="0" >
+        <!-- main shell table-->
+       
+        <tr>
+            <td height="30px" width="931" class="topheaderbar" align="left" colspan ="2" >
+               
+            </td>
+            <!--end headerbar background container-->
+        </tr>
+        <tr>
+            <td height="8px">
+                <img src="~/images/spacer.gif" width="1" height="8" /></td>
+        </tr>
+        <tr>
+            <!--bottom datacubes-->
+            <td> Ecommerce Side Menu <br />will appear here</td>
+            <td>
+                <table width="931" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table width="691" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="240">
+                                        &nbsp;
+                                    </td>
+                                    <td height="360" width="451">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                               
+                            </table>
+                        </td>
+                        
+                        <td width="240" height="360">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+               
+            
+            </td>
+        <!--end bottom datacubes-->
+        </tr>
+        <!--end bottom datacubes-->
+      
+        <!--end footer-->
+        <tr>
+            <!--copyright-->
+            <td class="copyright" colspan ="2">
+                </td>
+        </tr>
+        <!--end copyright-->
+    </table>
+    
+</asp:Content>

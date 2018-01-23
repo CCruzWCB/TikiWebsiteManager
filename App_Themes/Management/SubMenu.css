@@ -1,0 +1,95 @@
+﻿.SubMenu ul.AspNet-Menu /* Tier 1 */
+{
+    /* width: 64em; This is more than (6em x 2) because we want to leave room for borders around the <li> elements that are selected */
+    top: 0em;
+    LEFT:0;
+ 
+}
+
+.submenubg
+{
+
+ BACKGROUND: #E3E3E3; FLOAT: left; WIDTH: 100%; 
+}
+
+.SubMenu li /* all list items */
+{
+    /*width: 6em;*/
+    background: #E3E3E3;/*#F4F4F4;*/
+padding-left:10px;
+    
+}
+
+.SubMenu li:hover, /* list items being hovered over */
+.SubMenu li.AspNet-Menu-Hover
+{
+    background: #E3E3E3;
+}
+
+.SubMenu a /* all anchors and spans (nodes with no link) */
+{
+    color: Black;
+    padding: 4px 2px 4px 8px;
+    border-bottom :1px solid #E6E6E6;
+    border-left :1px solid #E6E6E6;
+    border-right :1px solid #E6E6E6;
+    background: transparent url(arrowRight.gif) right center no-repeat;
+}
+
+.SubMenu li.AspNet-Menu-Leaf a, /* leaves */
+.SubMenu li.AspNet-Menu-Leaf span
+{
+    background-image: none !important;
+}
+
+.SubMenu li:hover a, /* hovered text */
+.SubMenu li:hover span,
+.SubMenu li.AspNet-Menu-Hover a,
+.SubMenu li.AspNet-Menu-Hover span,
+.SubMenu li:hover li:hover a,
+.SubMenu li:hover li:hover span,
+.SubMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover a,
+.SubMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover span,
+.SubMenu li:hover li:hover li:hover a,
+.SubMenu li:hover li:hover li:hover span,
+.SubMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li.AspNet-Menu-Hover a,
+.SubMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li.AspNet-Menu-Hover span
+{
+    color: White;
+    background: transparent url(activeArrowRight.gif) right center no-repeat;
+}
+
+.SubMenu li:hover li a, /* the tier above this one is hovered */
+.SubMenu li:hover li span,
+.SubMenu li.AspNet-Menu-Hover li a,
+.SubMenu li.AspNet-Menu-Hover li span,
+.SubMenu li:hover li:hover li a,
+.SubMenu li:hover li:hover li span,
+.SubMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li a,
+.SubMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li span
+{
+    color: Black;
+    background: transparent url(arrowRight.gif) right center no-repeat;
+}
+
+.SubMenu .AspNet-Menu-Selected /* this tier is selected */
+{
+ /*   border: solid 1px #00ff00 !important;*/
+    color:Red;
+}
+
+.SubMenu .AspNet-Menu-ChildSelected /* a tier below this one is selected */
+{
+    border: solid 1px #ff0000 !important;
+}
+
+.SubMenu .AspNet-Menu-ParentSelected /* a tier above this one is selected */
+{
+    border: solid 1px Red !important;
+}
+
+#EntertainmentMessage
+{
+   /* padding-top: 2em;
+    clear: both;*/
+}

@@ -1,0 +1,114 @@
+<%@ Master Language="VB" MasterPageFile ="~/MasterPages/MasterPage.master"  CodeFile="C_Layout.master.vb" Inherits="C_Layout" %>
+<%@ MasterType VirtualPath ="~/MasterPages/MasterPage.master"  %>
+
+<asp:Content ContentPlaceHolderID ="contentMain"  runat ="server" >
+<table width="940" border="0" class ="grayout" cellspacing="0" cellpadding="0"><!-- main shell table-->
+  <tr>
+    <td>
+		<table width="940" border="0" cellspacing="0" cellpadding="0"><!-- header table to hold logo, cart, account-->
+		  <tr>
+			<td align="left" width=697><img src="~/images/logo.jpg" /></td>
+			<td align="right" valign=center width=150>
+				<table border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td valign=center><img src="~/images/carticon.gif" width="22" height="21" alt="" /></td>
+				<td align="right" class="yellowbox">&nbsp;shopping cart</td>
+				  </tr>
+				</table>
+			</td>			
+			<td align="right" class=minitext valign=center width=93px>my account&nbsp;&nbsp;</td>
+		  </tr>
+		</table><!--end header table to hold logo, cart, account-->
+	</td>
+  </tr>
+  <tr>
+    <td height=30px width=940 class=topheaderbar align="left"><!--headerbar background container-->
+		  <asp:DataList Width="100%" ID="dlCategory" runat="server" CssClass="mainmenutext"
+                    DataSourceID="dsCategories" RepeatDirection="Horizontal" RepeatLayout="table">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="lnkCategory" CssClass ="yellowbox" runat="server" Text='<%# Eval("Name") %>' NavigateUrl='<%# "~/ContentManagement/managecategorypage.aspx?cat=" & Eval("ProductCategoryID") %>'></asp:HyperLink>
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="dsCategories" runat="server" ConnectionString="<%$ ConnectionStrings:BaseDBConnection %>"
+                    SelectCommand="SELECT [ProductCategoryID], [Name] FROM [vProductCategories] WHERE ([ParentCategoryID] = @ParentCategoryID)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="0" Name="ParentCategoryID" Type="Int32" />
+                        
+                    </SelectParameters>
+                </asp:SqlDataSource>
+	</td><!--end headerbar background container-->
+  </tr>
+  <tr>
+  	<td height=8px><img src=~/images/spacer.gif / width=1 height=8></td>
+  </tr>
+ 
+		
+	  
+	<tr><!--bottom datacubes-->
+		<td width=940px>
+			<table width="940" height="487" border="0" cellspacing="0" cellpadding="0"><!--menu and datacubes-->
+				<tr>
+					<td height="487px" width="157px" valign=top align="left">&nbsp;<font class=leftmenutoptext>
+					
+					</td>
+					<td height="487px" width="8px"><img src="~/images/spacer.gif" height=1 width=1 /></td>
+					<td height="487px" width="606px"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder></td>
+					<td height="487px" width="8px"><img src="~/images/spacer.gif" height=1 width=1 /></td>
+					<td height="487px" width="157px">
+						<table width="157" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+							<td height="157px" width="157px"><asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder></td>
+						  </tr>
+						  <tr>
+							<td height="8px" width="157px"><img src="~/images/spacer.gif" /></td>
+						  </tr>
+						  <tr>
+							<td height="157px" width="157px"><asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                            </asp:ContentPlaceHolder></td>
+						  </tr>
+						  <tr>
+							<td height="8px" width="157px"><img src="~/images/spacer.gif" /></td>
+						  </tr>
+						  <tr>
+							<td height="157px" width="157px"><asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                            </asp:ContentPlaceHolder></td>
+						  </tr>
+						</table>
+					</td>
+				  </tr>
+			</table><!--end menu and datacubes-->
+		</td>
+	</tr><!--end bottom datacubes-->
+	<tr>
+            <!--featured items-->
+            <td colspan="3">
+                <table id="tblFeaturedItems" runat="server" width="771" border="0" style="background-color: #f4f2f2"  cellpadding="2">
+                    
+                    <tr>
+                        <td colspan="4">
+                        <asp:ContentPlaceHolder ID="FeaturedItems" runat="server">
+                        
+                            </asp:ContentPlaceHolder>
+                            
+                        </td>
+                    </tr>
+                    
+                  
+                </table>
+            </td>
+        </tr>
+        <!--end featured items-->
+	<tr><!--footer-->
+		<td class=footer>order status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help/customer service
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;security/privacy
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catalog request&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sitemap
+		</td>
+	</tr><!--end footer-->
+  <tr><!--copyright-->
+	<td class=copyright>copyright &copy;2007, 
+	</td>
+</tr><!--end copyright-->
+</table>
+</asp:Content>

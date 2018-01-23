@@ -1,0 +1,133 @@
+<%@ Master Language="VB" MasterPageFile="~/MasterPages/MasterPage.master" CodeFile="Series_Layout.master.vb"
+    Inherits="MasterPages_Series_Layout" %>
+<%@ MasterType VirtualPath="~/MasterPages/MasterPage.master" %>
+<asp:Content ContentPlaceHolderID="contentMain" runat="server">
+    <div>
+        <asp:DropDownList ID="ddlSeries" AutoPostBack="true" AppendDataBoundItems="true"
+            DataSourceID="dsSeries" runat="server" DataTextField="Name" DataValueField="ProductSeriesID">
+            <asp:ListItem Selected="true" Text="Select Series" Value="0" />
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="dsSeries" runat="server" ConnectionString="<%$ ConnectionStrings:BaseDBConnection %>"
+            SelectCommand="[GetAllMktgProductSeries]" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+    </div>
+    <br />
+    <table border="0" class="grayout" cellspacing="0" cellpadding="0">
+        <!-- main shell table-->
+        <tr>
+            <td>
+                <table  border="0" cellspacing="0" cellpadding="0">
+                    <!-- header table to hold logo, cart, account-->
+                    <tr>
+                        <td align="left" width="697">
+                            <img src="../images/logo.jpg" alt="" /></td>
+                        <td align="right" valign="center" width="150">
+                           
+                        </td>
+                        <td align="right" class="minitext" valign="center" width="93px">
+                            my account&nbsp;&nbsp;</td>
+                    </tr>
+                </table>
+                <!--end header table to hold logo, cart, account-->
+            </td>
+        </tr>
+      
+      
+        <tr>
+            <!--bottom datacubes-->
+            <td>
+                <table width="931" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table width="682" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="422px" width="687px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="682px" height="4px">
+                                        <img src="../images/spacer.gif" alt="" /></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table width="682" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </td>
+                                                <td>
+                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </td>
+                                                <td>
+                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder8" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="4px" height="484px">
+                            <img src="../images/spacer.gif" alt="" /></td>
+                        <td>
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="240px" height="4px">
+                                        <img src="../images/spacer.gif" /></td>
+                                </tr>
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="120px" width="240px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+               
+            
+            </td>
+        <!--end bottom datacubes-->
+        </tr>
+        
+        <tr>
+            <!--footer-->
+            <td class="footer">
+                order status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help/customer
+                service &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;security/privacy
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catalog request&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sitemap
+            </td>
+        </tr>
+        <!--end footer-->
+        <tr>
+            <!--copyright-->
+            <td class="copyright">
+                copyright &copy;2007, Char-Broil
+            </td>
+        </tr>
+        <!--end copyright-->
+    </table>
+</asp:Content>

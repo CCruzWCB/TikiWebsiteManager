@@ -1,0 +1,90 @@
+<%@ Master Language="C#" %>
+<%@ Register Src="usercontrols/menuWinXPThemes.ascx" TagName="menuWinXPThemes" TagPrefix="uc2" %>
+<%@ Register Src="usercontrols/menuMSNThemes.ascx" TagName="menuMSNThemes" TagPrefix="uc1" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/tr/xhtml11/DTD/xhtml11.dtd">
+
+<script runat="server">
+    
+    void Page_Load(object sender, EventArgs e) {
+        this.WebPartManager1.DisplayMode = WebPartManager.BrowseDisplayMode;
+    }
+    
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <style id=print media="print">
+        #leftSide, #footerSide {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="header">
+            <tr>
+                <td class="logo">
+                    <asp:Image ID="Image1" runat="server" skinid="logo"/></td>
+                <td class="title">
+                    .NET Treats & Tricks
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td colspan="1" class="headerbar">
+                    &nbsp;&nbsp;
+                </td>
+                <td colspan="2" class="headerbar">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" SkinID="SiteMap" />&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td id="leftSide" class="menu">
+                    <asp:WebPartManager ID="WebPartManager1" runat="server">
+                        <Personalization Enabled="false" />
+                    </asp:WebPartManager>
+                    <br />
+
+                    <asp:WebPartZone ID="WebPartZone1" runat="server" SkinID="MenuZone">
+                        <ZoneTemplate>
+                            <uc1:menuMSNThemes ID="MenuMSNThemes1" runat="server" />
+                            <uc2:menuWinXPThemes ID="MenuWinXPThemes1" runat="server" />
+                        </ZoneTemplate>
+                    </asp:WebPartZone>
+                    &nbsp;<br />
+                    &nbsp;
+
+                </td>
+                <td valign="top">
+    <div>
+    <blockquote>
+          <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </blockquote>
+    </div>
+                </td>
+            </tr>
+            <tr id="footerSide">
+                <td>&nbsp;
+                </td>
+                <td class="footer">
+                    <br />
+                    <blockquote>
+                        CopyRight Info © 2005
+                        <br />
+                    </blockquote>
+                </td>
+            </tr>
+        </table>
+    
+    
+    
+
+    </form>
+</body>
+</html>

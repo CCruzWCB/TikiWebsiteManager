@@ -1,0 +1,49 @@
+<%@ Master Language="VB" MasterPageFile="~/MasterPages/MasterPage.master"  CodeFile="Promo_Layout.master.vb" Inherits="MasterPages_Promo_Layout" %>
+<%@ MasterType VirtualPath ="~/MasterPages/MasterPage.master"  %>
+<asp:Content ContentPlaceHolderID ="contentMain"  runat ="server" >
+<div>
+    <asp:DropDownList id="ddlPromotions" AutoPostBack="true" AppendDataBoundItems="true" DataSourceID="dsPromotions" runat="server" DataTextField="Name" DataValueField="PromotionID">
+    <asp:ListItem Selected="true" Text="Select Promotion" Value="0" />
+    </asp:DropDownList>
+<asp:SqlDataSource ID="dsPromotions" runat="server" ConnectionString="<%$ ConnectionStrings:LLFPublicWebsiteConnectionString %>"
+                                    SelectCommand="GetPromotion"
+                                    SelectCommandType="StoredProcedure">
+                                    <SelectParameters>
+                                        <asp:Parameter DefaultValue="0" Name="PromotionID" Type="Int32" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+</div> <br />
+  <table border="0" class="grayout" cellspacing="0" cellpadding="0">
+        <!-- main shell table-->
+        <tr>
+            <!--bottom datacubes-->
+            <td>
+                <table width="931" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table width="687" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="422px" width="687px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="4px" height="484px">
+                            <img src="../images/spacer.gif" alt="" /></td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+               
+            
+            </td>
+        <!--end bottom datacubes-->
+        </tr>
+        
+        <!--end footer-->
+        
+        <!--end copyright-->
+    </table>
+</asp:Content>

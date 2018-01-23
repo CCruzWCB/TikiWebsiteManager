@@ -1,0 +1,215 @@
+<%@ Master Language="VB" CodeFile="Home_Layout1.master.vb"
+    Inherits="MasterPages_Home_Layout1" %>
+    <%@ Register src="../WebControls/footer.ascx" tagname="footer" tagprefix="uc1" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title id="myPageTitle" runat="server">[Set Title with PageTitle Property]</title>
+    
+</head>
+<body>
+<form runat ="server" >
+ 
+
+        <center>
+            <link href="../App_Themes/MSN_blue/default.css" rel="stylesheet" type="text/css" />
+         <asp:ScriptManager ID="SM_MasterLayout" runat="server" ></asp:ScriptManager>
+         <asp:Label ID="lblMasterPageHeader" runat="server" Text ="[Page Header]" CssClass ="pageheader" ></asp:Label>
+          <table width="940" border="0" cellspacing="0" cellpadding="0">
+                <!-- main shell table-->
+                <tr>
+                    <td>
+                    <asp:Label ID="lblDisplayMessage"  Width ="100%"  runat="server">[Display Message]</asp:Label>
+                        <asp:Image Height="7px" ImageUrl="~/Images/spacer.gif" ID="Image2" runat="server" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width="940" border="0" cellspacing="0" cellpadding="0">
+                            <!-- header table to hold logo, cart, account-->
+                            <tr>
+                                <td rowspan="3" align="left" style="width: 200px">
+                                    <asp:HyperLink ImageUrl="~/Images/logomedium.jpg" ToolTip="Home" ID="hlHome" NavigateUrl="~/ContentManagement/managehomepage.aspx"
+                                        runat="server"></asp:HyperLink></td>
+                                <td colspan="2" valign="bottom" class="minitext2" align="right">
+                                    <asp:LoginStatus ID="loginstatus1" Visible ="false"  runat="server" LoginText="" LogoutText="(logout)" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img alt="" src="../images/spacer.gif" height="2px" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="middle">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td align="center" style="width: 460px">
+                                                <asp:Menu ID="mnuTop" Visible ="false"  CssSelectorClass="TopMenu" Orientation="Horizontal" Width ="100%" runat="server">
+                                                    <Items>
+                                                        
+                                                        <asp:MenuItem Text="Customer Support" Value="Customer Support" Selectable="False"
+                                                            ToolTip="Customer Support">
+                                                            
+                                                        </asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="" Text="My Account" Value="My Account"
+                                                            ToolTip="My Account"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="" Text="Shopping Cart" Value="Shopping Cart"
+                                                            ToolTip="Shopping Cart"></asp:MenuItem>
+                                                    </Items>
+                                                </asp:Menu>
+                                            </td>
+                                            <td valign="middle" align="left">
+                                                &nbsp;</td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="190px" align="right">
+                                    <asp:Panel ID="pnlSearch" runat="server" DefaultButton="btnGo" Visible ="false" >
+                                        &nbsp;<asp:TextBox CssClass="tbox" ID="txtSearch" Width="175px" runat="server" Text="search keyword, sku #, or item #"
+                                            AutoCompleteType="Search"></asp:TextBox>&nbsp;</asp:Panel>
+                                </td>
+                                <td width="62px" valign="middle" align="center">
+                                    <asp:Button ID="btnGo" CssClass="tinybtn" Visible ="false"  runat="server" Text="Search" /></td>
+                            </tr>
+                        </table>
+                        <!--end header table to hold logo, cart, account-->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="30px" width="940" class="topheaderbar1" align="left">
+                        <!--headerbar background container-->
+                        <table border="0" cellspacing="0" cellpadding="0" >
+                            <tr>
+                                <td width="940px" align="center">
+                                    <asp:Menu ID="mnuMainCategory2" Visible ="false"  DataSourceID="SiteMapDataSource" runat="server" Orientation="Horizontal"
+                                        ForeColor="#666666">
+                                    </asp:Menu>
+                                <asp:Menu ID="mnuMainCategory" runat="server"  DataSourceID="SiteMapDataSource"  MaximumDynamicDisplayLevels ="0" Orientation ="Horizontal" SkinID="subMenu"  
+                                
+    CssSelectorClass="SimpleEntertainmentMenu">
+    <DataBindings>
+    <asp:MenuItemBinding DataMember ="SitemapNode" NavigateUrlField ="url" TextField ="description"  ToolTipField ="url" />
+    </DataBindings>
+    </asp:Menu>    
+<div id="tabsB">    
+<asp:Repeater runat="server" ID="tabsB23" DataSourceID="SiteMapDataSource" Visible ="false"  >
+    <HeaderTemplate>
+        <ul>
+    </HeaderTemplate>
+
+    <ItemTemplate>
+        <li>
+            <a id="A1" runat ="server" title ='<%#Eval("[categoryid]") %>'  href='<%# Eval("Url") %>'><span><%#Eval("[keywords]")%></span></a>
+    </li>         
+    </ItemTemplate>
+
+    <FooterTemplate>
+        </ul>
+    </FooterTemplate>
+</asp:Repeater>
+</div> 
+
+<div id="tabsB">
+<ul>
+  
+  <li><a title="About Use" 
+  href="../FooterContent/EditDocument.aspx?doc_id=50"><span>About Us 
+  </span></a> 
+  <li><a title="Buy Online" 
+  href="../ContentManagement/manageBuyOnlinepage.aspx"><span>Buy Online 
+  </span></a> 
+   </ul>
+</div>
+   
+<asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" SiteMapProvider="SqlSiteMapProvider"
+                            ShowStartingNode="false"></asp:SiteMapDataSource>
+                            
+                                     <%--<asp:Menu ID="mnuRecipe" runat="server" Orientation="Horizontal" ForeColor="#666666"
+                                        ItemWrap="True">
+                                    </asp:Menu>--%>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!--end headerbar background container-->
+                </tr>
+                <tr>
+                    <td colspan="2" height="20px" width="940" class="topheaderbar1" align="left" class ="submenubg">
+                        <!--headerbar background container-->
+                        <table border="0" cellspacing="0" cellpadding="0" class ="submenubg">
+                            <tr>
+                                <td width="100%" align="center" class ="submenubg"> 
+                                <asp:Menu ID="subMenu" runat="server" DataSourceID="SiteMapDataSource2"  Orientation ="Horizontal" SkinID="subMenu"  CssClass="headLinksBar" 
+    CssSelectorClass="SubMenu" MaximumDynamicDisplayLevels ="0" >
+</asp:Menu>
+<asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" SiteMapProvider="SqlSiteMapProvider"
+                            StartFromCurrentNode="false" ShowStartingNode="false" StartingNodeOffset ="1"></asp:SiteMapDataSource>
+                                    &nbsp;<asp:label id="lblMessage" runat="server" text="Sample display message could go here."></asp:label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img alt="" src="../images/spacer.gif" width="1" height="4" /></td>
+                </tr>
+                <tr>
+                    <td>
+                 
+
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img alt="" src="../images/spacer.gif" width="1" height="4" /></td>
+                </tr>
+                <tr style="height: 484px;">
+                    <td valign="top" colspan="2" align="left">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img alt="" src="../images/spacer.gif" width="1" height="6" /></td>
+                </tr>
+                <tr>
+                    <td class="footer" colspan="2">
+                    
+                      <!--begin footer here --> 
+                      
+                      <!--end footer here --> 
+                      
+                    </td>
+                </tr>
+                <!--end footer-->
+                <tr>
+                    <!--copyright-->
+                    <td class="copyright" colspan="2">
+                        ©
+                        <%=Year(Now)%>
+                        Lamplight , Inc.</td>
+                </tr>
+                <!--end copyright-->
+            </table>
+            <!--end main shell table-->
+        </center>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" ShowStartingNode="false" runat="server"
+            SiteMapProvider="SqlSiteMapProvider" />
+            <!--end main shell table-->
+        </center>
+        
+     
+        <asp:SqlDataSource ID="dsMetaData" runat="server" ConnectionString="<%$ ConnectionStrings:LLFPublicWebsiteConnectionString %>"
+        SelectCommand="[GetMetaData]" SelectCommandType="storedProcedure" EnableCaching="false"
+        SqlCacheDependency="LLFwebsiteprivate:MetaData" CacheDuration="Infinite">
+    </asp:SqlDataSource>
+    
+</form>
+</body>
+</html>

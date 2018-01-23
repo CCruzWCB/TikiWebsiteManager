@@ -1,0 +1,201 @@
+﻿ 
+   body {
+	margin:0;
+	padding:0;
+	font: normal 11px/1.5em Verdana;
+}
+
+h2 {
+	font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+}
+img {
+border: none;
+} 
+
+.SimpleEntertainmentMenu /* menu divs */
+{
+ float:left;
+      /*width:100%;*/
+      /*background:#F4F4F4;*/
+      background:#FFFFFF;
+      font-size:93%;
+      line-height:normal;
+}
+
+/*#topnav A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; BACKGROUND: url(tableftI.gif) no-repeat left top; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#topnav A SPAN {
+	PADDING-RIGHT: 15px; DISPLAY: block; PADDING-LEFT: 6px; BACKGROUND: url(tabrightI.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 4px; COLOR: #666; PADDING-TOP: 5px
+
+}
+#topnav A:hover {
+	BACKGROUND-POSITION: 0% -42px
+}
+#topnav A:hover SPAN {
+	BACKGROUND-POSITION: 100% -42px
+}
+*/
+
+.SimpleEntertainmentMenu ul.AspNet-Menu /* ul */
+{
+  margin:0;
+	  padding:10px 10px 0px 0px;
+	  
+	  list-style:none;
+}
+
+.SimpleEntertainmentMenu li.AspNet-Menu /* all list items */
+{
+   display:inline;
+      margin:0;
+      padding:0;
+      cursor:hand;
+}
+
+/*.SimpleEntertainmentMenu li:hover,  list items being hovered over */
+
+.SimpleEntertainmentMenu .AspNet-Menu li.AspNet-Menu-Leaf 
+{
+    float:left;
+      background:url("tableftI.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+}
+
+
+
+
+
+
+#tabsB {
+/*	FONT-SIZE: 93%; BACKGROUND: #f4f4f4; FLOAT: left; WIDTH: 100%; LINE-HEIGHT: normal*/
+FLOAT: right; 
+padding-top : 0px;
+margin-top:0px;
+
+}
+#tabsB UL {
+FONT-SIZE: 93%; 
+LINE-HEIGHT: normal;
+	PADDING-RIGHT: 10px; PADDING-LEFT: 50px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 10px; LIST-STYLE-TYPE: none
+}
+#tabsB LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#tabsB A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; BACKGROUND: url(tableftI.gif) no-repeat left top; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#tabsB A SPAN {
+	PADDING-RIGHT: 15px; DISPLAY: block; PADDING-LEFT: 6px; BACKGROUND: url(tabrightI.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 4px; COLOR: #666; PADDING-TOP: 5px
+}
+#tabsB A SPAN {
+	FLOAT: none
+}
+#tabsB A:hover SPAN {
+	COLOR: #000
+}
+#tabsB A:hover {
+	BACKGROUND-POSITION: 0% -42px
+}
+#tabsB A:hover SPAN {
+	BACKGROUND-POSITION: 100% -42px
+}
+
+
+.SimpleEntertainmentMenu a, /* all anchors and spans (nodes with no link) */
+/*.SimpleEntertainmentMenu span
+{
+    float:left;
+      background:url("tableftB.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+}*/
+.SimpleEntertainmentMenu a, /* all anchors and spans (nodes with no link) */
+.SimpleEntertainmentMenu .AspNet-Menu-Link
+{
+ float:left;
+      display:block;
+      background:url("tabrightI.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#666;
+}
+ 
+.SimpleEntertainmentMenu .AspNet-Menu li.AspNet-Menu-Leaf:hover /* hovered text */     
+{
+/*background-position:0% -42px;*/
+background-position:0% -42px;
+
+}
+      
+.SimpleEntertainmentMenu li:hover a /* hovered text */
+{
+background-position:100% -42px; 
+
+}
+
+.SimpleEntertainmentMenu .AspNet-Menu li.AspNet-Menu-Selected
+{
+    background-position:0% -42px;
+}
+
+.SimpleEntertainmentMenu .AspNet-Menu li.AspNet-Menu-Selected a /* hovered text */
+{
+background-position:100% -42px; 
+
+}
+
+
+.SimpleEntertainmentMenu li:hover span,
+.SimpleEntertainmentMenu li.AspNet-Menu-Hover a,
+.SimpleEntertainmentMenu li.AspNet-Menu-Hover ,
+.SimpleEntertainmentMenu li:hover li:hover a
+{
+       /*background-position:0% -42px;*/
+       /*background-position:100% -42px; */
+  
+}
+
+/*.SimpleEntertainmentMenu li:hover li a,*/
+
+ /* the tier above this one is hovered */
+/*.SimpleEntertainmentMenu li:hover li span,
+.SimpleEntertainmentMenu li.AspNet-Menu-Hover li a,
+.SimpleEntertainmentMenu li.AspNet-Menu-Hover li span,
+.SimpleEntertainmentMenu li:hover li:hover li a,
+.SimpleEntertainmentMenu li:hover li:hover li span,
+.SimpleEntertainmentMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li a,
+.SimpleEntertainmentMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li span
+{
+background-position:100% -42px;
+}
+*/
+
+/* this tier is selected */
+/*.SimpleEntertainmentMenu .AspNet-Menu-Selected 
+{
+    color:#FF9834;
+}
+*/
+/* a tier below this one is selected */
+/*.SimpleEntertainmentMenu .AspNet-Menu-ChildSelected 
+{
+    color:#FF9834;
+}
+*/
+/* a tier above this one is selected */
+/*.SimpleEntertainmentMenu .AspNet-Menu-ParentSelected 
+{
+    color:#FF9834;
+}
+*/
+#EntertainmentMessage
+{
+    /*padding-top: 2em;
+    clear: both;*/
+}

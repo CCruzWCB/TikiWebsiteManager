@@ -1,0 +1,806 @@
+BODY, table ,TD
+{
+FONT-SIZE: 12px;
+	COLOR: #000000;
+	/*BORDER-BOTTOM: #ffffff 1px solid;*/
+	font-family: Arial, Helvetica, sans-serif;	
+}
+.grayout
+{width: 100%; background-color: silver;opacity:.50;filter: alpha(opacity=50); -moz-opacity: 0.5;border:1px solid black; }
+/*div.transOFF {width: 100%; background-color: silver;border:1px solid black; }
+div.transON  {width: 100%; background-color: silver;opacity:.50;filter: alpha(opacity=50); -moz-opacity: 0.5;border:1px solid black; }
+*/
+a.DataLink:hover {width: 100%; background-color: silver;border:1px solid black; }
+
+/*STyle for SAmple Content Pages */
+
+.minitext {
+	font-family: tahoma;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0.05em;
+	vertical-align: middle;
+}
+.minitext2 {
+	font-family: tahoma;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0.05em;
+	vertical-align: bottom;
+}
+
+
+ a.yellowboxon:hover {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:bold ;
+	color: Black;  /*#666666;*/
+	border :3px solid yellow;
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.yellowboxon:active {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:bold ;
+	border :3px solid yellow;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.yellowboxon:visited {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:bold ;
+	border :3px solid green;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+
+ a.yellowbox:hover {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:normal ;
+	color: Black;  /*#666666;*/
+	border :3px solid yellow;
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.yellowbox:active {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:normal ;
+	border :3px solid yellow;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.yellowbox:visited {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:normal ;
+	border :3px solid yellow;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+
+.yellowbox{
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:normal ;
+	border :3px solid yellow;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+
+.mainmenutext {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.mainmenutextbold:hover {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:bold ;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.mainmenutextbold:visited{
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:bold ;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+a.mainmenutextbold:active{
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight:bold ;
+	color: Black;  /*#666666;*/
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+.leftmenutoptext {
+	font-family: tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	color: #787878;
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+.sortby {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #787878;
+	letter-spacing: 0.05em;
+}
+.itemdesc {
+	font-family: tahoma;
+	font-size: 16px;
+	font-weight: normal;
+	color: #565656;
+	letter-spacing: 0.04em;
+	text-align: left;
+}
+
+.listingname {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #787878;
+	letter-spacing: 0.05em;
+}
+.longdesc {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #787878;
+	letter-spacing: 0.05em;
+	line-height: 15px;
+}
+.exclusive {
+	font-family: tahoma;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+	color: #dd0000;
+	letter-spacing: 0.05em;
+}
+
+.additional {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #787878;
+	letter-spacing: 0.05em;
+}
+.additional2 {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #787878;
+	letter-spacing: 0.05em;
+	line-height: 19px;
+}
+.shippingdetails {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #372ea6;
+	letter-spacing: 0.05em;
+	line-height: 16px;
+	text-decoration:underline;
+}
+.additionalcharges {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #cd0101;
+	letter-spacing: 0.05em;
+	line-height: 16px;
+}
+.leftmenuitems {
+	font-family: tahoma;
+	font-size: 12px;
+	text-indent: -1.4em;
+	margin-left:2.5em;
+	font-weight: normal;
+	color: #787878;
+	letter-spacing: 0.05em;
+	line-height: 12px;
+	text-align: left;
+}
+.breadcrumb  {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #adadad;
+	letter-spacing: 0.05em;
+	text-align: left;
+	text-transform: uppercase;
+}
+.footer {
+	font-family: tahoma;
+	height: 25px;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0.2em;
+	text-align: center;
+	vertical-align: middle;
+}
+.copyright {
+	font-family: tahoma;
+	height: 15px;
+	font-size: 9px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0.1em;
+	text-align: center;
+	vertical-align: top;
+}
+.topheaderbar {
+	background-color: #f4f2f2;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #a3a3a3;
+	border-bottom-color: #a3a3a3;
+}
+.tbox {
+	border: 1px solid #c8c8c8;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+.smallbtn {
+	font-family: tahoma;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0.05em;
+	vertical-align: middle;
+	background-color: #c8c8c8;
+	border: 1px solid #7a7a7a;
+}
+.btn {
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	letter-spacing: 0.05em;
+	vertical-align: middle;
+	background-color: #c8c8c8;
+	border: 1px solid #7a7a7a;
+}
+
+/* EnD Style for sample content pages */
+.box
+{
+	BORDER-RIGHT: #b2b2b2 1px solid; 
+	BORDER-TOP: #b2b2b2 1px solid; 
+	BORDER-LEFT: #b2b2b2 1px solid; 
+	BORDER-BOTTOM: #b2b2b2 1px solid;
+	padding : 0px;
+	
+
+	
+}
+.box .header
+{
+COLOR: #c43217;	
+
+}
+.box .headertext
+{
+	color: #6c6b6b;
+	FONT-SIZE: 10px;
+
+}
+
+.box .text
+{
+	COLOR: #000000;
+	FONT-SIZE: 12px;
+	font-weight :bold ;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+.box .listitem
+{
+	COLOR: #385b9d;
+	FONT-SIZE: 12px;
+	font-weight :bold ;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+.copy
+{
+FONT-SIZE: 12px;
+	COLOR: #000000;
+
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+.copybold
+{
+FONT-SIZE: 12px;
+	COLOR: #000000;
+	font-weight :bold ;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+
+.wizard
+{
+	background: #008000;
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	width :100%;
+	height:100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.warning
+{
+	background: #FFFF00;
+	FONT-SIZE: 12px;
+	width :100%;
+	height:100%;
+	COLOR: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+ 
+}
+.confirmation
+{
+		background: green;
+	FONT-SIZE: 12px;
+	COLOR: white;
+	width :100%;
+	height:100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.syntaxerror
+{
+	background: #ce4949;
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	width :100%;
+	height:100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.instructions
+{
+	background: #FF00FF;
+	text-align :center ;
+	FONT-SIZE: 12px;
+	width :100%;
+	height:100%;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.general
+{
+	
+	background: #eeeeee;
+	text-align :center ;
+	FONT-SIZE: 12px;
+	width :100%;
+	height:100%;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.DataGrid
+{
+	border: solid 3px #FFFFFF;
+	font-size:xx-small ;
+	font-family: Tahoma;
+}
+
+.DataGridItem
+{
+	font-size:xx-small ;
+}
+.DataGridAltItem
+{
+	background-color :#e5e6c9;
+}
+.DataGridHeader
+{
+	font-size:12pt;
+	font-weight:bold;
+	background :#eeeeee;
+	color:#000000;
+	font-size:11px;
+	font-weight :bold;
+
+}
+
+
+
+.trlight {
+	BORDER-BOTTOM: #dbd8d1 1px solid; BACKGROUND-COLOR: #eff2f4
+}
+.trdark {
+	BORDER-BOTTOM: #dbd8d1 1px solid; BACKGROUND-COLOR: #e7e7e7
+}
+.trwhite {
+	BORDER-BOTTOM: #dbd8d1 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.trheader {
+	BORDER-TOP: #cccccc 2px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+/*	FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#d3dadf, EndColorStr=#cbbab5, GradientType=0);*/
+	COLOR: #861f00;
+	BORDER-BOTTOM: #bbbbbb 2px solid;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+.trtools {
+	BORDER-TOP: #acac73 2px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+	/*FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f6f6e0, EndColorStr=#dcdcb1, GradientType=0);*/
+	COLOR: #861f00;
+	BORDER-BOTTOM: #acac73 2px solid;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+.pagetop {
+	BORDER-TOP: #cccccc 2px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+	/*FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#d3dadf, EndColorStr=#cbbab5, GradientType=0);*/
+	COLOR: #861f00;
+	BORDER-BOTTOM: #bbbbbb 2px solid;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.headertext {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+	COLOR: #861f00;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.selected{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerbold {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+	
+.subheader {
+	BORDER-TOP: #cccccc 2px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	height: 13px;
+	/*FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#d3dadf, EndColorStr=#cbbab5, GradientType=0);*/
+	COLOR: #861f00;
+	BORDER-BOTTOM: #bbbbbb 2px solid;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.itemselected
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}	
+.pageheader {
+	FONT-WEIGHT: bold;
+	text-align : center ;
+	FONT-SIZE: 22px;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+	
+.tdrow {
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	BORDER-BOTTOM: #ffffff 2px solid;
+	font-family: Arial, Helvetica, sans-serif;
+}	
+
+.irow {
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}	
+
+.outertable {
+border:1;
+border-color:#999999
+}
+
+INPUT.Text {
+	BORDER-RIGHT: #dddddd 1px solid; BORDER-TOP: #aaaaaa 1px solid; BACKGROUND: #ffffee; BORDER-LEFT: #aaaaaa 1px solid; BORDER-BOTTOM: #dddddd 1px solid
+}
+
+.requiredfield {
+	BORDER-RIGHT: #dddddd 1px solid; 
+	BORDER-TOP: #aaaaaa 1px solid; 
+	BACKGROUND:  yellow; 
+	BORDER-LEFT: #aaaaaa 1px solid; 
+	BORDER-BOTTOM: #dddddd 1px solid
+	
+}
+
+
+select {
+	font-size:12px;
+	background-color :#BBBBBB;
+	
+}
+
+input.btn {
+	BORDER-TOP: #999999 1px solid;
+	BORDER-bottom: #999999 1px solid;
+	BORDER-left: #999999 1px solid;
+	BORDER-right: #999999 1px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	/*FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f2f2f2, EndColorStr=#d7cdca, GradientType=0);*/
+	COLOR: #861f00;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+/*A:link {
+	 COLOR: #4855b5; 
+}
+A:visited {
+	 COLOR: #4855b5; 
+}
+A:active {
+	 COLOR: #4855b5; 
+}
+A:hover {
+	 COLOR: #4855b5; TEXT-DECORATION: none
+}
+*/
+a 
+{
+/*	text-decoration: none;*/
+}
+
+
+a.copy:link 
+{
+	color: #53728d; /*53728d;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+a.copy:visited
+{
+	color: #53728d;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+a.copy:active 
+{
+	color: #4a3827;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+a.copy:hover 
+{
+	color: #464140;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+
+a:link 
+{
+	color: #cc6666; /*464140;*/
+}
+
+a:visited 
+{
+	color: #cc6666;
+}
+
+a:active 
+{
+	color: #cc6666;
+}
+
+a:hover 
+{
+	color: #53728d
+}
+
+#menu {
+	border-bottom : 1px solid #ccc;
+	margin : 0;
+	padding-bottom : 19px;
+	padding-left : 10px;
+}
+#menu ul, #menu li	{
+	display : inline;
+	list-style-type : none;
+	margin : 0;
+	padding : 0;
+}
+
+	
+#menu a:link, #menu a:visited	{
+	background : #E8EBF0;
+	
+	border : 1px solid #ccc;
+	color : #666;
+	float : left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight : bold;
+	line-height : 14px;
+	margin-right : 8px;
+	padding : 2px 10px 2px 10px;
+	text-decoration : none;
+}
+
+#menu a:link.active, #menu a:visited.active	{
+	background : #fff;
+	border-bottom : 1px solid #fff;
+	color : #000;
+}
+
+#menu a:hover	{
+	color : #f00;
+	BACKGROUND: #ffffff;
+}
+
+	
+body.section-1 #menu li#nav-1 a, 
+body.section-2 #menu li#nav-2 a,
+body.section-3 #menu li#nav-3 a,
+body.section-4 #menu li#nav-4 a {
+	background : #fff;
+	border-bottom : 1px solid #fff;
+	color : #861f00;
+}
+
+ #menu ul a:hover {
+	color : #f00 !important;
+}
+
+#contents {
+	background : #fff;
+	border : 1px solid #ccc;
+	border-top : none;
+	clear : both;
+	margin : 0px;
+	padding : 15px;
+}
+
+.errorbox {
+background: #ce4949;
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	width :100%;
+	height:100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu li#nav-1 a .menuoff
+{
+	border-bottom : 1px solid #ccc;
+	margin : 0;
+	padding-bottom : 19px;
+	padding-left : 10px;
+}
+
+#menu li#nav-1 a .menuon
+{
+	background : #red;
+	border-bottom : 1px solid #fff;
+	color : #861f00;	
+}
+
+
+        .updateProgress
+        {
+            border-width:1px; 
+            border-style:solid; 
+            background-color:#ffffff; 
+            position:absolute; 
+            width:175px; 
+            height:75px;    
+        }
+        .updateProgressMessage
+        {
+            margin:3px; 
+            font-family:Trebuchet MS; 
+            font-size:small; 
+            vertical-align: middle;
+        }
+
+
+
+
+
+/* ===== Reorder List Begin ===== */
+.dragHandle {
+	width:10px;
+	height:10px;
+	background-color:black;
+	background-image:url(images/bg-menu-main.png);
+	cursor:move;
+	border:outset thin white;
+}
+
+.callbackStyle {
+	border:thin blue inset;		
+}
+
+.callbackStyle table {
+	background-color:#5377A9;	
+	color:Black;
+}
+
+
+.reorderListContainer li {
+	list-style:none;
+	margin:2px;
+	background-image:url(images/bg_nav.gif);
+	background-repeat:repeat-x;
+	/*color:#FFF;*/
+}
+
+.reorderListDemo li a {color:#FFF !important; font-weight:bold;}
+
+.reorderCue {
+	border:dashed thin black;
+	/*width:100%;*/
+	width:210;
+	height:82px;
+}
+
+.itemArea {
+	margin-left:15px;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:1em;
+	text-align:left;
+}
+
+
+/* ===== Reorder List End ===== */
+
+
+
+
+		
